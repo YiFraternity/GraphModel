@@ -1,0 +1,5 @@
+networkx==2.6.3
+numpy==1.17.0
+gensim==4.2.0
+torch==0.13.1
+pandas==1.2.4
