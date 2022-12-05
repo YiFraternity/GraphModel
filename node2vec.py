@@ -75,7 +75,6 @@ class Node2Vec:
         sequences = []
         nodes = list(self.graph.nodes)
         for _ in range(self.workers):
-            print()
             random.shuffle(nodes)
             for v in nodes:
                 sequences.append(self.node2vec_walk(start_node=v))

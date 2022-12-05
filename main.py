@@ -1,3 +1,4 @@
+import matplotlib.pyplot as plt
 import networkx as nx
 import pandas as pd
 
@@ -16,6 +17,9 @@ if __name__ == '__main__':
     G = nx.Graph()
     graph_edges = read_csv('./graph.csv')
     G.add_weighted_edges_from(graph_edges)
+    nx.draw(G, pos=nx.spring_layout(G), node_color='w', edge_color='r', with_labels=True)
+    plt.savefig('./png/network.png')
+    plt.show()
 
     print('-------DeepWalk Embedding--------')
     deepwalk = DeepWalk(G)
